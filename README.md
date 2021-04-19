@@ -1,1 +1,2 @@
-Hello Khoa
+Hello Git 
+My name is Khoa
