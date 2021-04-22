@@ -1,5 +1,5 @@
 const navItem = [{
-        name: "Item1",
+        name: "Item 1",
         children: [
             "Item 1.1",
             "Item 1.2",
@@ -7,7 +7,7 @@ const navItem = [{
         ]
     },
     {
-        name: "Item2",
+        name: "Item 2",
         children: [
             "Item 2.1",
             "Item 2.2",
@@ -17,30 +17,28 @@ const navItem = [{
         ]
     },
     {
-        name: "Item3",
+        name: "Item 3",
     },
     {
-        name: "Item4",
+        name: "Item 4",
     },
     {
-        name: "Item5",
+        name: "Item 5",
     },
 ]
 
 window.onload = function() {
     for (let i = 0; i < navItem.length; i++) {
-        document.getElementById("renderMenu").insertAdjacentHTML("beforeend",
-                `<span id="${navItem[i].name}" onmouseover=addChildern('${navItem[i].name}')>${navItem[i].name}</span>`)
-            // if (navItem[i].children != undefined) {
-            //     for (let j = 0; j < navItem[i].children.length; j++) {
-            //         document.getElementById(`${navItem[i].name}`).insertAdjacentHTML("beforeend",
-            //             `<span id="${navItem[i].children[j]}")>${navItem[i].children[j]}</span>`)
-            //     }
+        document.getElementsByClassName("menu")[0].innerHTML += `<span> ${navItem[i].name} 
+        <div class=" menu-vertical menu_dropdown">
+        </div>        
+        </span>`;
+        if (navItem[i].children != undefined) {
+            for (let j = 0; j < navItem[i].children.length; j++) {
+                document.getElementsByClassName("menu_dropdown")[i].innerHTML +=
+                    `<span> ${navItem[i].children[j]} </span>`;
+            }
 
-        // }
+        }
     }
-}
-
-function addChildern(name) {
-
 }

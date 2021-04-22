@@ -30,6 +30,15 @@ span:hover {
     display: block;
 }
 
-.menutest1 {
+.menu_dropdown {
+    display: none;
+}
+
+.menu span:hover .menu_dropdown {
     display: block;
+    position: fixed;
+}
+
+.menu_dropdown span:hover {
+    background: white;
 }

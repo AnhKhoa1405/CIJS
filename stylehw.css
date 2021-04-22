@@ -16,9 +16,13 @@ body {
     width: 60%;
     height: 70%;
     position: absolute;
-    left: 15%;
+    left: 20%;
     top: 10%;
     display: flex;
+}
+
+.picIntro {
+    width: 100%;
 }
 
 img {
