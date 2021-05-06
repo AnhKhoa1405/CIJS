@@ -12,7 +12,6 @@ body {
 }
 
 .parent {
-    border: 1px solid red;
     width: 60%;
     height: 70%;
     position: absolute;
@@ -23,6 +22,7 @@ body {
 
 .picIntro {
     width: 100%;
+    display: none;
 }
 
 img {
@@ -98,4 +98,10 @@ input {
 
 .signUp {
     color: #B3B2B3;
+}
+
+@media (min-width: 768px) {
+    .picIntro {
+        display: block;
+    }
 }
